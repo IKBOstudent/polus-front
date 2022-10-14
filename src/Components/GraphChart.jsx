@@ -138,7 +138,7 @@ const GraphChart = () => {
                     </ul>
                 </div>
             </section>
-            <section className="text-back-dark" style={{ height: '400px' }}>
+            <section className=" text-back-dark" style={{ height: '400px' }}>
                 {returnChart()}
             </section>
         </div>

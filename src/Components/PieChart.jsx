@@ -45,10 +45,10 @@ const PieChart = () => {
                     <Doughnut height={200} width={200} data={data} />
                 </div>
             </section>
-            <section className="grow items-center">
+            <section className="grow items-center overflow-x-auto">
                 <table className="w-full table-auto divide-y divide-white/10">
-                    {data.map((item) => (
-                        <tr className="">
+                    {data.map((item, id) => (
+                        <tr key={id} className="">
                             <th>
                                 <p
                                     style={{
