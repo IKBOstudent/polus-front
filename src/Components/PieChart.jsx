@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import { ResponsivePie } from '@nivo/pie';
+import { ResponsivePie } from "@nivo/pie";
 
 const Doughnut = ({ height, width, data }) => (
     <ResponsivePie
@@ -12,36 +12,36 @@ const Doughnut = ({ height, width, data }) => (
         padAngle={3}
         activeOuterRadiusOffset={6}
         enableArcLinkLabels={false}
-        colors={{ datum: 'data.color' }}
+        colors={{ datum: "data.color" }}
     />
 );
 
 const data = [
     {
-        id: '1',
+        id: "1",
         value: 15,
-        color: '#00CDB5',
+        color: "#00CDB5",
     },
     {
-        id: '2',
+        id: "2",
         value: 12,
-        color: '#00B3B4',
+        color: "#00B3B4",
     },
     {
-        id: '3',
+        id: "3",
         value: 5,
-        color: '#4492B5',
+        color: "#4492B5",
     },
 ];
 
 const PieChart = () => {
     return (
         <div className="w-full flex flex-col gap-8">
-            <section className="">Doughnut chart</section>
+            <section className="">Классы </section>
             <section className="self-center flex flex-col items-center gap-1">
                 <p className="text-xl">124 223</p>
                 <p className="text-sm">Total rocks</p>
-                <div className="text-back-dark" style={{ height: '200px', width: '200px' }}>
+                <div className="text-back-dark" style={{ height: "200px", width: "200px" }}>
                     <Doughnut height={200} width={200} data={data} />
                 </div>
             </section>
@@ -52,14 +52,15 @@ const PieChart = () => {
                             <th>
                                 <p
                                     style={{
-                                        width: '1rem',
-                                        height: '1rem',
+                                        width: "1rem",
+                                        height: "1rem",
                                         backgroundColor: item.color,
-                                    }}></p>
+                                    }}
+                                ></p>
                             </th>
-                            <td className="py-2 px-6">{item.id}</td>
-                            <td className="py-2 px-6">{item.value}</td>
-                            <td className="py-2 px-6">{item.value / 0.32}%</td>
+                            <td className="py-2 px-2">{item.id}</td>
+                            <td className="py-2 px-4">{item.value}</td>
+                            <td className="py-2 px-4">{item.value / 0.32}%</td>
                         </tr>
                     ))}
                 </table>

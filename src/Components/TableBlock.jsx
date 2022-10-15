@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const table = [
-    { name: 'asdf', size: 345, count: 12 },
-    { name: 'afc', size: 315, count: 124 },
-    { name: 'bbrr', size: 343, count: 152 },
-    { name: 'sadfh', size: 335, count: 112 },
-    { name: 'fasdg', size: 311, count: 512 },
+    { name: "asdf", size: 345, count: 12 },
+    { name: "afc", size: 315, count: 124 },
+    { name: "bbrr", size: 343, count: 152 },
+    { name: "sadfh", size: 335, count: 112 },
+    { name: "fasdg", size: 311, count: 512 },
 ];
 
 const TableBlock = () => {
@@ -16,11 +16,11 @@ const TableBlock = () => {
                 <ul className="mt-4 flex flex-row gap-4">
                     <li className="w-24 p-4 bg-white/5">
                         <p className="font-bold">814</p>
-                        <span>good</span>
+                        <span>Плохие</span>
                     </li>
                     <li className="w-24 p-4 bg-white/5">
                         <p className="font-bold">142</p>
-                        <span>bad</span>
+                        <span>хорошие</span>
                     </li>
                 </ul>
             </div>
@@ -47,21 +47,11 @@ const TableBlock = () => {
                                 </thead>
                                 <tbody>
                                     {table.map((item, id) => (
-                                        <tr
-                                            key={id}
-                                            className="border-b text-white border-white/20">
-                                            <td className="px-6 py-4 whitespace-nowrap font-medium ">
-                                                {id}
-                                            </td>
-                                            <td className="px-6 py-4 whitespace-nowrap">
-                                                {item.name}
-                                            </td>
-                                            <td className="px-6 py-4 whitespace-nowrap">
-                                                {item.size}
-                                            </td>
-                                            <td className="px-6 py-4 whitespace-nowrap">
-                                                {item.count}
-                                            </td>
+                                        <tr key={id} className="border-b text-white border-white/20">
+                                            <td className="px-6 py-4 whitespace-nowrap font-medium ">{id}</td>
+                                            <td className="px-6 py-4 whitespace-nowrap">{item.name}</td>
+                                            <td className="px-6 py-4 whitespace-nowrap">{item.size}</td>
+                                            <td className="px-6 py-4 whitespace-nowrap">{item.count}</td>
                                         </tr>
                                     ))}
                                 </tbody>
