@@ -1,3 +1,4 @@
+import axios from "axios";
 import React from "react";
 
 const CardsBlock = () => {
@@ -9,7 +10,7 @@ const CardsBlock = () => {
         setValue(0);
 
         console.log("отправка запроса на бэк");
-        // setSize()
+        axios.post("http://192.168.1.66:8000/rocks?limit=" + cur_val).then(response => console.log(response));
     };
 
     return (
